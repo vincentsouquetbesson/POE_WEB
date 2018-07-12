@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script src="js/mylibrary.js"></script>
+    <script language="JavaScript">
+        var red = true;
+        function hello() {
+            if (red) {
+                document.bgColor = 'blue';
+                red = false;
+            }
+            else {
+                document.bgColor = 'red';
+                red = true;
+            }
+        }
+        function manageForm() {
+            var title = document.forms["myForm"].elements["titleBox"].value;
+            var title = document.forms["myForm"].elements["priceBox"].value;
+            alert(title + " " + price);
+        }
+        function checkTitle() {
+            var title = document.forms["myForm"].elements["titleBox"].value;
+            if (title.length == 0) {
+                alert("Titre vide impossible");
+            }
+            // var toto = 123
+            // var titi = "12ab"
+            // isNan(toto) // false
+            // isNan(titi) // true
+        }
+    </script>
+</head>
+<body>
+    Hello Javascript!<br />
+    <input type="button" value="OK" onclick="hello()">
+    <script lang="Javascript">
+        document.write(circleArea(2));
+        document.write(navigator.appCodeName);
+        document.write("<br/>");
+        var tab = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        display(tab);
+        document.write(sum(tab) + "<br/>");
+        document.write(max(tab) + "<br/>");
+        document.write(avg(tab) + "<br/>");
+        document.write(isPrime(7) + "<br/>");
+        document.write(isPrime(8) + "<br/>");
+        display(getPrimeNumbers(tab));
+        var res = tab.filter(i => i % 2 == 0);
+        display(res);
+        res = tab.map(i => i + 1);
+        display(res);
+        var reduc = res.reduce((a, b) => a + b, 0);
+        document.write(reduc + "<br/>");
+        res = tab.filter(i => isPrime(i));
+        display(res);
+    </script>
+
+    <input type="text" onclick="document.bgColor = 'black'" onmouseover="document.bgColor = 'green'" onmouseout="document.bgColor = 'blue'" onfocus="document.bgColor = 'yellow'" />
+    <br />
+    <br />
+    <br />
+    <form name="myForm">
+        Title : <input type="text" name="titleBox" onblur="checkTitle()">*<br />
+        Price : <input type="text" name="priceBox" /><br />
+        <input type="button" value="OK" name="okButton" onclick="manageForm()" />
+
+    </form>
+
+</body>
+</html>
+
+
+
+</body>
+</html>

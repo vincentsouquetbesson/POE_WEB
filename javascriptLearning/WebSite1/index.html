@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Hi    </p>
+    <script>
+        var red = true;
+        function hello() {
+            if (red) {
+                document.bgColor = 'green';
+                red = false;
+            }
+            else {
+                document.bgColor = 'red';
+                red = true;
+            }
+        }
+    </script>
+    <script>
+        var baseColor = document.body.style.backgroundColor;
+        var value = 0
+        var interval;
+
+        function strobe() {
+            if (value == 0)
+                document.body.style.backgroundColor = 'red';
+            if (value == 1)
+                document.body.style.backgroundColor = 'blue';
+            if (value == 2)
+                document.body.style.backgroundColor = 'yellow';
+            value++;
+            if (value == 3)
+                value = 0;
+        }
+
+        function start_strobe() {
+            interval = window.setInterval(strobe, 70); //in milliseconds
+        }
+
+        function stop_strobe() {
+            window.clearInterval(interval);
+            document.body.style.backgroundColor = baseColor;
+        }
+    </script>
+
+
+    <input type="button" value="'start" onclick="start_strobe()" ; />
+    <input type="button" value="'stop" onclick="stop_strobe()" ; />
+    <h1>VOUS ETES LE 1000EM VISITEUR</h1>
+</body>
+</html>
