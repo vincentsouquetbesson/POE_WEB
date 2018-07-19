@@ -1,0 +1,101 @@
+﻿body, h1, h2, h3, p, ul, li, form {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.containerUnes {
+    display: flex;
+    flex-flow: row;
+    width: 1000px;
+    height: 350px;
+}
+
+    .containerUnes > div {
+        display: flex;
+        flex-flow: column;
+        width: 50%;
+    }
+
+    .containerUnes article {
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        background-color: red;
+        position: relative;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .containerUnes > article {
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+    }
+
+article div {
+    position: absolute;
+    bottom: -20pt;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+    color: #FFF;
+    transition: 0.2s;
+}
+
+article:hover div {
+    bottom: 0;
+}
+
+article h1 {
+    font-size: 15pt;
+}
+
+article p {
+    font-size: 12pt;
+    margin-top: 5pt;
+}
+
+#articleUn {
+    background: url('http://www.commeaucinema.com/images/news_insert/undefined_952f22aa35489f33af02d6f22330aa20.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+#articleDeux {
+    background: url('http://israelmagazine.co.il/wp-content/uploads/2017/06/Gal-Gadot-HD-Wallpaper.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+#articleTrois {
+    background: url('http://fr.web.img2.acsta.net/pictures/16/07/19/16/33/125610.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+    #articleUn:hover, #articleDeux:hover, #articleTrois:hover {
+        background-size: 110%;
+        cursor: pointer;
+    }
+
+@media only screen and (max-width: 700px) {
+    .containerUnes {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        height: 900px;
+    }
+
+        .containerUnes > article {
+            width: 100%;
+            height: 30%;
+        }
+
+        .containerUnes > div {
+            width: 100%;
+            height: 70%;
+        }
+
+            .containerUnes > div > article {
+                height: 30%;
+            }
+}

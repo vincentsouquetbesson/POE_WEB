@@ -1,0 +1,52 @@
+﻿body ,h1,ul,li,p{
+    margin : 0;
+    padding : 0;
+}
+
+#monSliderParent {
+    background-color: red;
+    height : 300px;
+    position: relative;
+    overflow : hidden;
+}
+
+#monSliderContent {
+    background-color: green;
+    position : absolute;
+    top  : 0;
+    left : 0;
+    width  : 400%;
+    height : 100%;
+    display : flex;
+    flex-flow : wrap;
+    transition : 1s;
+}
+
+.slide {
+    width : 25%;
+}
+
+#monSliderSlide1 {
+    background-color: blue;
+}
+#monSliderSlide2 {
+    background-color: blueviolet;
+}
+#monSliderSlide3 {
+    background-color: navy;
+}
+#monSliderSlide4 {
+    background-color: orange;
+}
+
+#monSliderArrows{
+    position : absolute;
+    top :0;
+    left :0;
+    width : 100%;
+    height : 100%;
+    display : flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
